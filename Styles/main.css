@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    --color-madera: rgb(122, 39, 0);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.parrafo {
+    font-size: 18px;
+}
+
+/* HEADER */
+
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .5) 100%), url("../imgs/hero-image.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    color: #fff;
+    padding-top: 10px;
+    position: relative;
+}
+
+.header .nav {
+    min-width: 100%;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.header .nav a {
+    color: inherit;
+    text-decoration: none;
+    opacity: .7;
+    margin-left: 7px;
+}
+
+.header .nav a:hover {
+    opacity: 1;
+}
+
+.header .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 60px;
+    margin: 0 50px;
+}
+
+.header .hero h1 {
+    text-align: center;
+    font-size: 70px;
+    font-weight: 700;
+}
+
+.header .hero .parrafo {
+    font-size: 20px;
+    text-align: center;
+}
+
+h1, .header .parrafo {
+    opacity: .75;
+}
+
+.header .wave {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+/* MAIN */
+
+.seccion {
+    padding: 20px;
+}
+
+.titulo-seccion {
+    font-size: 30px;
+    color: var(--color-madera);
+    text-align: center;
+}
+
+.proyectos {
+    background: #f2f2f2;
+}
+
+.proyectos .contenedor-imagenes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.proyectos .contenedor-imagen {
+    background-color: #fff;
+    width: 270px;
+    height: 270px;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid #b9b9b9;
+    margin: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: all .3s;
+}
+
+.proyectos .contenedor-imagen::before {
+    content: 'COMPRAR';
+    color: rgba(255, 255, 255, .6);
+    font-size: 40px;
+    font-weight: bold;
+    position: absolute;
+    right: 100%;
+    width: 300px;
+    height: 300px;
+    background: rgba(0, 0, 0, .5);
+    z-index: 2;
+    transition: all .5s;
+    text-align: center;
+    line-height: 300px;
+    border-radius: 20px;
+}
+
+.proyectos .contenedor-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .5s;
+    transform: scale(.9);
+}
+
+.proyectos .contenedor-imagen:hover img {
+    transform: scale(2) rotate(27deg);
+}
+
+.proyectos .contenedor-imagen:hover::before {
+    right: 0;
+}
+
+.proyectos .contenedor-imagen:nth-child(1) ::before {
+    content: '1';
+}
+
+.proyectos > a {
+    width: 100%;
+    display: inline-block;
+    text-align: right;
+    text-decoration: none;
+}
+
+.formulario {
+    background: rgb(22, 22, 22);
+    color: #fff;
+    position: relative;
+}
+
+.formulario .titulo-seccion {
+    color: inherit;
+}
+
+.formulario .form {
+    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.formulario .form input,
+.formulario .form textarea {
+    border-radius: 5px;
+    border: 1px solid #888;
+    background: transparent;
+    margin: 10px 0;
+    font-size: 18px;
+    color: inherit;
+    outline-style: none;
+    padding: 10px;
+}
+
+.formulario .form > input {
+    width: 49.35%;
+}
+
+.formulario .form textarea {
+    min-width: 100%;
+    min-height: 100px;
+    height: 135px;
+    max-height: 250px;
+}
+
+.formulario .form input:focus,
+.formulario .form textarea:focus {
+    border-width: 2px;
+    border-color: rgb(255, 72, 0);
+}
+
+.formulario .form .contenedor-btn {
+    width: 100%;
+    text-align: center;
+}
+
+.formulario input[type="button"] {
+    width: 200px;
+    padding: 10px 0;
+    cursor: pointer;
+    color: #888;
+    letter-spacing: 3px;
+    transition: all .3s;
+}
+
+.formulario input[type="button"]:focus {
+    border: 1px solid #888;
+}
+
+.formulario input[type="button"]:hover {
+    background: #fff;
+    color: rgb(22, 22, 22);
+    font-weight: bold;
+    box-shadow: 0 0 7px #fff;
+}
+
+.formulario input[type="button"]:active {
+    opacity: .6;
+}
+
+.compromisos .contenedor-lista {
+    display: flex;
+    justify-content: center;
+    margin: 0 50px;
+}
+
+/* FOOTER */
+
+.footer {
+    background-image:linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url("../imgs/fondo-footer.jpg");
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 150px;
+}
+
+.footer .enlaces a, .footer .titulo-seccion{
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer .enlaces {
+    display: flex;
+    justify-content: center;
+}
+
+.footer .enlaces i {
+    font-size: 30px;
+    margin: 10px;
+    opacity: .6;
+}
+
+.footer .enlaces i:hover {
+    opacity: 1;
+    font-size: 35px;
+}
+
+@media (max-width: 750px) {
+    .header {
+        height: 95vh;
+    }
+}
+
+@media (max-width: 550px) {
+    .header .nav {
+        text-align: center;
+    }
+}
+
+@media (max-width: 475px) {
+    .header .hero h1 {
+        font-size: 60px;
+    }
+
+    .formulario .form > input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 340px) {
+    .formulario input[type="button"] {
+        width: 150px;
+    }
+}
